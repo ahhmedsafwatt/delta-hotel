@@ -4,7 +4,6 @@ import { ArrowLeft, MapPin, Star, Users, Calendar, Check } from "lucide-react";
 import type { Hotel } from "../types";
 import { storageService } from "../data/mockData";
 import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { toast } from "sonner";
