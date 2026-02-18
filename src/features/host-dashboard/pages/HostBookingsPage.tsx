@@ -137,7 +137,7 @@ export default function HostBookingsPage() {
         .single();
 
       if (bookingDetails && bookingDetails.guest_id) {
-        await supabase
+      const {data}=  await supabase
           .from("notifications")
           .insert({
             user_id: bookingDetails.guest_id,
@@ -146,6 +146,8 @@ export default function HostBookingsPage() {
             type: "booking_confirmed",
             related_booking_id: id,
           });
+          console.log("Notification sent:", data);
+          
       }
     }
 
@@ -173,9 +175,9 @@ export default function HostBookingsPage() {
             .insert({
               booking_id: id,
               amount: booking.total_price,
-              payment_method: rows.find(r => r.booking_id === id)?.hotel_name + 'host created', // Special method for host-created payments
+              payment_method: 'host created', // Special method for host-created payments
               status: "completed",
-              payment_date: new Date().toISOString().split('T')[0], // Today's date 
+              payment_date: new Date().toISOString(), // Today's date 
               
             });
         }

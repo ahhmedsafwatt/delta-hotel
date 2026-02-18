@@ -143,7 +143,7 @@ export default function HostBookingCreatePage() {
             amount: totalPrice,
             payment_method: "host_created", // Special method for host-created bookings
             status: "completed",
-            payment_date: new Date().toISOString().split('T')[0], // Today's date
+            payment_date: new Date().toISOString(), // Today's date
           });
 
         if (paymentError) {

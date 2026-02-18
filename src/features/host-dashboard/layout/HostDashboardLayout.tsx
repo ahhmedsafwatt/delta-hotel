@@ -135,7 +135,7 @@ export default function HostDashboardLayout() {
 
       <main className="flex min-h-screen flex-1 flex-col">
         <header className="sticky top-0 z-20 flex items-center justify-between border-b bg-background/90 px-4 py-3 backdrop-blur md:justify-end">
-          <div className="flex flex-1 items-center gap-3 md:justify-end">
+          <div className="flex flex-1 items-center gap-3  justify-end">
             <ThemeToggle />
             <div className="hidden text-sm text-muted-foreground md:block">
               
